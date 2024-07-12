@@ -1,17 +1,26 @@
 {
-  "extends": "expo/tsconfig.base",
-  "compilerOptions": {
-    "strict": true,
-    "paths": {
-      "@/*": [
-        "./*"
-      ]
-    }
-  },
-  "include": [
-    "**/*.ts",
-    "**/*.tsx",
-    ".expo/types/**/*.ts",
-    "expo-env.d.ts"
-  ]
+	"extends": "expo/tsconfig.base",
+
+	"compilerOptions": {
+		"moduleResolution": "Bundler",
+		"strict": true,
+		"baseUrl": ".",
+		"paths": {
+			"@/*": ["./src/*"],
+			"@components/*": ["./src/components/*"],
+			"@assets/*": ["./src/assets/*"],
+			"@constants/*": ["./src/constants/*"],
+			"@data/*": ["./src/data/*"],
+			"@helpers/*": ["./src/helpers/*"],
+			"@hooks/*": ["./src/hooks/*"]
+		}
+	},
+	"include": [
+		"**/*.ts",
+		"**/*.tsx",
+		"src/app/[id].sx",
+		".expo/types/**/*.ts",
+		"expo-env.d.ts",
+		"src/utils/globalApi.js"
+, "src/components/CustomButton.jsx"	]
 }
